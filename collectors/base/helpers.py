@@ -8,6 +8,7 @@ import re
 import time
 import logging
 import datetime
+from dateutil import parser as dateutil_parser
 logger = logging.getLogger(__name__)
 
 
@@ -26,7 +27,10 @@ def slugify(value):
 def parse_date(value, format):
     """Parse sting date.
     """
-    return datetime.datetime.strptime(value, format).date()
+    if format is None:
+        return dateutil_parser.parse(value).date()
+    else:
+        return datetime.datetime.strptime(value, format).date()
 
 
 def parse_datetime(value, format):

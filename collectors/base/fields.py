@@ -75,7 +75,7 @@ class Date(Base):
 
     column_type = sa.Date
 
-    def __init__(self, format, **params):
+    def __init__(self, format=None, **params):
         super(Date, self).__init__(**params)
         self.__format = format
 
