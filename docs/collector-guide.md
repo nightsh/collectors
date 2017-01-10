@@ -29,6 +29,8 @@ Now you're ready to work on you own collector!
 
 ## Writing a Collector
 
+We use PostgreSQL for our database and [Alembic](http://alembic.zzzcomputing.com/en/latest/) for migrations.
+
 To bootstrap a new `guide` collector:
 
 ```
@@ -109,7 +111,7 @@ def collect(conf, conn):
     base.helpers.stop(conf, 'guide', {'collected': count})
 ```
 
-## Writing an Record
+## Writing a Record
 
 In this step we're working on `what's data our collector will get`.
 
@@ -185,7 +187,7 @@ def parse_record(url, item):
 
 ## Start Scraping
 
-We're ready to start an actual collection:
+We're ready to start the collecting process:
 
 ```
 $ make start guide
@@ -209,6 +211,6 @@ $ git commit -am 'implemented guide spider'
 $ git push origin feature/guide-spider -u
 ```
 
-And sent using github web interface.
+Submit using github web interface.
 
 Thanks!

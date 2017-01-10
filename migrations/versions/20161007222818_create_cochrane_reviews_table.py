@@ -34,4 +34,4 @@ def upgrade():
 
 
 def downgrade():
-    op.drop_table('nct')
+    op.drop_table('cochrane_reviews')
