@@ -191,3 +191,15 @@ cochrane-reviews:
     COCHRANE_ARCHIVE_URL:
   tags:
     - opentrials
+
+data-contributions:
+  image: okibot/collectors
+  command: make start data_contributions
+  # restart: always
+  environment:
+    PYTHON_ENV:
+    WAREHOUSE_URL:
+    EXPLORER_URL:
+    LOGGING_URL:
+  tags:
+    - opentrials

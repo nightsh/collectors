@@ -87,3 +87,9 @@ cochrane-reviews:
     service: cochrane-reviews
     file: docker-cloud.yml
   restart: 'no'
+
+data-contributions:
+  extends:
+    service: data-contributions
+    file: docker-cloud.yml
+  restart: 'no'
